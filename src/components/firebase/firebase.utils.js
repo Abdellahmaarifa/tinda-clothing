@@ -3,13 +3,13 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-    apiKey: "AIzaSyBx0Z4SEjUAUV5qfQ6dvcJgQhRHOJepnnI",
-    authDomain: "crwn-db-df451.firebaseapp.com",
-    databaseURL: "https://crwn-db-df451.firebaseio.com",
-    projectId: "crwn-db-df451",
-    storageBucket: "crwn-db-df451.appspot.com",
-    messagingSenderId: "854495920753",
-    appId: "1:854495920753:web:384938135515fc135651d0"
+    apiKey: "AIzaSyDsh3l6EeFkmOo0CjdUB0RIb092LKA0XaU",
+    authDomain: "tinda-clothing-db.firebaseapp.com",
+    databaseURL: "https://tinda-clothing-db.firebaseio.com",
+    projectId: "tinda-clothing-db",
+    storageBucket: "tinda-clothing-db.appspot.com",
+    messagingSenderId: "844939905858",
+    appId: "1:844939905858:web:ac1ea0eb4090c23235d6db"
   };
 
   export const createUserProfileDocument = async(userAuth, additionalData) => {
