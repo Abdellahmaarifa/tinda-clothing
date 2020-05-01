@@ -6,3 +6,4 @@ export const SignInAndSignUpContainer = styled.div`
     justify-content: space-between;
     margin:30px auto;
 `;
+

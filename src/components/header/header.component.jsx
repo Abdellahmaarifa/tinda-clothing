@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as Logo } from '../../assets/4.4 crown.svg';
+import { ReactComponent as Logo } from '../../assets/tinda-logo.svg';
 import { auth } from '../firebase/firebase.utils';
 import { connect } from 'react-redux';
 import CartIcon from '../cart-icon/cart-icon.component';
