@@ -49,7 +49,7 @@ SOFTWARE.
 
 ## Author Info
 
-- Twitter - [@jamesqquick](https://twitter.com/Abdellahmaarifa)
-- Website - [James Q Quick](https://abdellahmaarifa.com)
+- Twitter - [@Abedllahmaarifa](https://twitter.com/Abdellahmaarifa)
+- Website - [Abdellah Maarifa](https://abdellahmaarifa.com)
 
 [Back To The Top](#read-me-template)
