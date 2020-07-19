@@ -7,11 +7,15 @@ export const CheckoutPageContainer = styled.div`
     flex-direction: column;
     align-items: center;
     margin: 50px auto 0;
+    margin-top: 18vh;
     button{
       margin-left: auto;
       margin-top: 50px;
     }
-    
+    @media only screen and (max-width: 56.25em) { /*tabport 900px*/
+      width: 85%;
+    } 
+ 
     `;
     
 export const CheckoutHeaderContainer = styled.div`
@@ -26,7 +30,15 @@ export const HeaderBlockContainer = styled.div`
   
         &:last-child {
           width: 8%;
-        }`;
+        }
+        
+        @media only screen and (max-width: 56.25em) { /*tabport 900px*/
+        font-size: 16px;
+      }         
+      @media only screen and (max-width: 37.5em) {  /*phone 600px */
+            font-size: 11.5px;
+    }
+`;
 export const TotalContainer = styled.div`
      margin-top: 30px;
       margin-left: auto;

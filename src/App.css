@@ -1,16 +1,42 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+html{
+    /* 62.5% = 10px / 16px; 1rem = 10px */
+    font-size: 62.5%;
+    @media only screen and (min-width: 112.5em) { /*desktop 1800px*/
+        font-size: 75%  !important; /*1rem = 12, 12/16*/
+    }
+    @media only screen and (max-width: 75em) { /*tapland 1200px*/
+        font-size: 50%  !important; /*1 rem = 8px, 8/16 = 50%*/
+    }
+    @media only screen and (max-width: 56.25em) { /*tabport 900px*/
+        font-size: 56.25%  !important; /*1 rem = 9px, 9/16 = 50%*/
+    } 
+    @media only screen and (max-width: 37.5em) {  /*phone/600px */
+        font-size: 45%  !important; 
+    }
+    @media only screen and (max-width: 25em) { /*smallphone 900px*/
+        font-size: 35.25% !important; /*1 rem = 9px, 9/16 = 50%*/
+    }
+}
+
 body{
-    font-family: 'Open Sans Condensed', sans-serif;
-    background-color:#F2F5F7;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    background-color:#F7F7F7;
+    box-sizing: inherit;
+    font-size: 1.6rem;
+    color:#373f49;
+
 }
 
 a {
     text-decoration: none;
-    color:black;
-}
-
-
-* {
-    box-sizing: border-box;
-    padding:0;
-    margin: 0;
+    color:#2c3e50 ;
 }

@@ -1,6 +1,6 @@
 import SHOP_DATA from './shop.data';
 const INIAL_STATE = {
-    collections : SHOP_DATA
+    categories : SHOP_DATA
 };
 
 

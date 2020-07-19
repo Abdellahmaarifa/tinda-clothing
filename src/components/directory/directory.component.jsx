@@ -3,9 +3,10 @@ import { connect } from 'react-redux';
 import { selectDirectorySections } from './directory.selectors';
 import { createStructuredSelector } from 'reselect';
 import MenuItem from '../menu-item/menu-item.component'; 
-import { DirectoryMenuContainer } from './directory.styles';
+import { DirectoryMenuContainer,DirectoryHeading } from './directory.styles';
 const Directory = ({sections}) =>(
   <DirectoryMenuContainer>
+    <DirectoryHeading>Explore popular categories</DirectoryHeading>
       {
           sections.map(({id, ...otherSectionProps}) => (
               <MenuItem 

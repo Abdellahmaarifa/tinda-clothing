@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { toggleCartHidden } from '../../redux/cart/cart.actions';
 import { selectCartItemsCount } from '../../redux/cart/cart.selectors';
-import { CartIconContainer, ShopingIconContainer, ItemCountContainer} from './cart-icon.styles';
+import { CartIconContainer, ItemCountContainer} from './cart-icon.styles';
 const CartIcon = ({toggleCartHidden, itemCount}) => (
     <CartIconContainer onClick={toggleCartHidden}>
-        <ShopingIconContainer/>
+        <i className="fas fa-shopping-bag"></i>
         <ItemCountContainer>{itemCount}</ItemCountContainer>
     </CartIconContainer>
 );

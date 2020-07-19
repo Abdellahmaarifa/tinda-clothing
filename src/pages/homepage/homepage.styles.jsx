@@ -5,5 +5,7 @@ export const HomePageContainer = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 0;
+    position:relative;
+    top: 76px;
 `;
 

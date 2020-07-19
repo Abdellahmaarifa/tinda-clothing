@@ -1,21 +1,21 @@
 import styled,{keyframes} from 'styled-components';
 import CustomButton from '../custom-button/custom-button.component';
 
-import img1 from '../../assets/1.jpg';
-import img2 from '../../assets/2.jpg';
-import img3 from '../../assets/3.jpg';
-import img4 from '../../assets/4.jpg';
+import imgSlid_1 from '../../assets/imgSlid_1.jpg';
+import imgSlid_2 from '../../assets/imgSlid_2.jpg';
+import imgSlid_3 from '../../assets/imgSlid_3.jpg';
+import imgSlid_4 from '../../assets/imgSlid_4.jpg';
 
 
 
-const animation = keyframes`
+const slideAnimation = keyframes`
     0%{left:100%;width:100%;}
     5%{left:0;}
     25%{left:0;}
     30%{left:-100%;width:100%}
     100%{left:-100%;width:0;}
 `;
-const banAnimated_2 = keyframes`
+const shakeAnimation = keyframes`
 from {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
@@ -69,7 +69,7 @@ const buttonAnimation = keyframes`
     transform: scale(1);
   }
 `;
-const banAnimated_1 = keyframes`
+const jelloAnimation = keyframes`
 
 from,
 1.1%,
@@ -112,11 +112,12 @@ to {
   -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
   transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
 }
-
-  
+ 
 `;
 export const HeaderSlidShowContainer = styled.div`
-width:100%;
+  width:100%;
+  position:relative;
+
 `;
 export const HeaderImagesContainer = styled.div`
     padding:0;
@@ -128,45 +129,47 @@ export const HeaderImagesContainer = styled.div`
     overflow:hidden;
     
     &>*{
-        animation:${animation} 20s infinite;
+        animation:${slideAnimation} 20s infinite;
         background-size:cover;
         background-position:center;
-        
         width:100%;
         height:100%;
+        @media only screen and (max-width: 37.5em) {  /* phone 600px */
+          background-position:left;
+        }
     }
 
     :nth-child(1) :nth-child(1){
         animation-delay:-1s !important;
-        background-image:url(${img1});
+        background-image:url(${imgSlid_1});
         > img {
-            animation:${banAnimated_1} 5s  infinite;
+            animation:${jelloAnimation} 5s  infinite;
         }
     }
     :nth-child(1) :nth-child(2){
         animation-delay:4s !important;
-        background-image:url(${img2});
+        background-image:url(${imgSlid_2});
         left:100%;
         > img {
-            animation:${banAnimated_2} 5s infinite;
+            animation:${shakeAnimation} 5s infinite;
         }
 
     }
     :nth-child(1) :nth-child(3){
         animation-delay:9s !important;
-        background-image:url(${img3});
+        background-image:url(${imgSlid_3});
         left:100%;
         > img {
-            animation:${banAnimated_1} 5s infinite;
+            animation:${jelloAnimation} 5s infinite;
         }
 
     }
     :nth-child(1) :nth-child(4){
         animation-delay:14s !important;
-        background-image:url(${img4});
+        background-image:url(${imgSlid_4});
         left:100%;
         > img {
-            animation:${banAnimated_2} 5s infinite;
+            animation:${shakeAnimation} 5s infinite;
         }
 
     }
@@ -180,18 +183,36 @@ export const ImageContainer = styled.div`
 `;
 
 
-export const BanContainer = styled.img`
+export const BannerContainer = styled.img`
     background-image:none !important;
     position:absolute;
     top:20px;
-    left:100px;
+    left:12%;
     width:auto;
-    height:90%;
+    height:70%;
+    @media only screen and (max-width: 37.5em) {  /* phone 600px */
+     height:60%;
+     left:23%;
+    }
+    @media only screen and (max-width: 25em) { /* smallphone 900px */
+      height:40%;
+      left:60px;
+      top:100px;
+    }
 `;
 
 export const ShopNowButton = styled(CustomButton)`
     animation:${buttonAnimation} 5s infinite;
     position: absolute;
-    top: 52.5%;
-    left: 16%;
+    bottom: 10%;
+    left: 17%;
+    transition:transform 0s;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+    &:hover{
+
+    }
+    @media only screen and (max-width: 37.5em) {  /* phone 600px */
+    left:35%;
+    }
+  
 `;

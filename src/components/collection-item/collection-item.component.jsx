@@ -1,26 +1,39 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {addItem} from '../../redux/cart/cart.actions';
-import CustomButton from '../custom-button/custom-button.component';
 import {
     CollectionItemContainer,
     ImageContainer,
     CollectionFooterContainer,
     NameContainer,
-    PriceContainer } from './collection-item.styles';
-const CollectionItem = ({ item, addItem}) => {
+    PriceContainer,
+    BuyIcon,
+    BuyQuantity} from './collection-item.styles';
+import { createStructuredSelector } from 'reselect';
+import { selectCartItems } from '../../redux/cart/cart.selectors';
+
+
+const CollectionItem = ({item, addItem, cartItems} ) => {
     const {name, price, imageUrl} = item;
+    const isInCartItem = cartItems.find(el => el.id === item.id);
     return (
     <CollectionItemContainer>
-        <ImageContainer imageUrl={imageUrl}>  
+        <ImageContainer imageUrl={imageUrl}>
+            <BuyIcon>
+                <i onClick={() => addItem(item)} className={`fas fa-cart-plus ${ isInCartItem ? `selected` : ' '}`}>
+                {
+                    isInCartItem ?
+                    <BuyQuantity>{isInCartItem.quantity}</BuyQuantity> :
+                    null
+                }
+                </i>
+              
+            </BuyIcon>  
         </ImageContainer>
         <CollectionFooterContainer>
             <NameContainer>{name}</NameContainer>
-            <PriceContainer>{price}</PriceContainer>
+            <PriceContainer>${price}</PriceContainer>
         </CollectionFooterContainer>   
-        <CustomButton inverted onClick={() => addItem(item)}>
-         Add to cart 
-        </CustomButton> 
     </CollectionItemContainer>
 
 )};
@@ -29,4 +42,8 @@ const CollectionItem = ({ item, addItem}) => {
 const mapDispatchToProps = dispatch => ({
     addItem: item => dispatch(addItem(item))
 })
-export default connect(null, mapDispatchToProps)(CollectionItem);
+const mapStateToProps = createStructuredSelector ({
+    cartItems:selectCartItems
+});
+  
+export default connect(mapStateToProps, mapDispatchToProps)(CollectionItem);

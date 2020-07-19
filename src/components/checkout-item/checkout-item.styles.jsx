@@ -11,6 +11,9 @@ export const CheckoutItemContainer = styled.div`
     padding: 15px 0;
     font-size: 20px;
     align-items: center;
+    @media only screen and (max-width: 56.25em) { /* tabport 900px */
+        font-size: 16px;
+    } 
 `;
 
 export const ImageContainer = styled.div`

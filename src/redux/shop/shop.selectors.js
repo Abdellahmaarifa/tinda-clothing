@@ -1,19 +1,17 @@
 import { createSelector } from 'reselect';
+import { cartActionTypes } from '../cart/cart.types';
 const selectShop = state => state.shop;
 
-
-
-export const selectCollections = createSelector(
+export const selectCategories = createSelector(
     [selectShop],
-    shop => shop.collections
+    shop => shop.categories
 );
 
-export const selectCollectionsForPreview = createSelector(
-    [selectCollections],
-    collections => Object.keys(collections).map(key => collections[key])
-  );
-
-export const selectCollection = collectionUrlParam => createSelector(
-    [selectCollections],
-    collections => collections[collectionUrlParam]
+export const selectCollections = (type) => createSelector(
+    [selectCategories],
+    categories => categories[type].collections
+);
+export const selectCollection = (itemUrlParam, type) => createSelector(
+    [selectCollections(type)],
+    collections => collections[itemUrlParam]
 );
