@@ -50,6 +50,6 @@ SOFTWARE.
 ## Author Info
 
 - Twitter - [@Abedllahmaarifa](https://twitter.com/Abdellahmaarifa)
-- Website - [Abdellah Maarifa](https://abdellahmaarifa.com)
+- Website - [Abdellah Maarifa](https://abdellahmaarifa.github.io/portfolio/)
 
 [Back To The Top](#read-me-template)
