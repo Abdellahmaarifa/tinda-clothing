@@ -2,7 +2,7 @@
 
 ![Project Image](<a href="https://ibb.co/ss913LJ"><img src="https://i.ibb.co/3SmFhtY/Tinda-Project-Photo.png" alt="Tinda-Project-Photo" border="0"></a>)
 
-> Tinda Clothing is a Simple E-commerce Web Site Built With ReactJs.
+> Tinda Clothing is a Simple E-commerce Web Site Built With ReactJS.
 
 ---
 
